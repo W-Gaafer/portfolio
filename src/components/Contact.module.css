@@ -1,29 +1,69 @@
 .contact {
   min-height: 100vh;
-  padding: 50px 20px;
+  padding: 80px 40px;
   background: #0a192f;
   text-align: center;
 }
 
 .contact h2 {
-  font-size: 36px;
+  font-size: 40px;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  text-align: left;
+}
+
+.container h3 {
+  padding-bottom: 10px;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.right a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 20px;
-  color: #00bfff;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 18px;
 }
 
-.contact p {
-  margin-bottom: 30px;
-  color: #cfd8dc;
-}
-
-.socials a {
-  margin: 0 15px;
-  font-size: 28px;
-  color: #61dafb;
-  transition: 0.3s;
-}
-
-.socials a:hover {
-  transform: scale(1.2);
-  color: #00bfff;
+.right a:hover {
+  color: #2563eb;
 }
