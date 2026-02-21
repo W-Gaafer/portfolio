@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
+import img01 from "../assets/profile image.JPG";
 
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
@@ -21,7 +22,7 @@ function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         <img
-          src="/profile image.jpg"
+          src={img01}
           alt="Waleed Profile"
           className={`${styles.profileImg} ${showProfile ? styles.show : ""}`}
         />

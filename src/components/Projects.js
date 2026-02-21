@@ -3,6 +3,13 @@ import useScrollReveal from "../hooks/useScrollReveal";
 import styles from "./Projects.module.css";
 import { FaGithub } from "react-icons/fa";
 import { IoMdLink } from "react-icons/io";
+import img0101 from "../assets/project0101.PNG";
+import img0102 from "../assets/project0102.PNG";
+import img0103 from "../assets/project0103.PNG";
+import img0201 from "../assets/project0201.PNG";
+import img0202 from "../assets/project0202.PNG";
+import img0301 from "../assets/project0301.PNG";
+import img0302 from "../assets/project0302.PNG";
 
 function Projects() {
   const ref = useRef(null);
@@ -13,7 +20,7 @@ function Projects() {
       title: "SOLMARE Online Market App.",
       description:
         "A streamlined e-commerce experience designed for simplicity and speed. Users can explore products without authentication, add items to their cart, and seamlessly connect with the seller via direct chat to finalize the purchase and arrange delivery.",
-      images: ["/project0101.png", "/project0102.png", "/project0103.png"],
+      images: [img0101, img0102, img0103],
       tech: [
         "React",
         "React Router",
@@ -32,7 +39,7 @@ function Projects() {
       title: "Fare Share Feature",
       description:
         "This feature simplifies shared expenses during road trips by allowing any partner to cover payments, while the feature automatically settles and summarizes debts at the end of the journey.",
-      images: ["/project0201.png", "/project0202.png"],
+      images: [img0201, img0202],
       tech: ["React", "HTML", "CSS modules", "JavaScript", "ES6+"],
       github: "https://github.com/W-Gaafer/fare-share",
       live: "https://w-gaafer.github.io/fare-share/",
@@ -41,7 +48,7 @@ function Projects() {
       title: "Handbag App",
       description:
         "The application helps users prepare everything they need for their trip, ensuring that no tasks are forgotten. It is fully online, requires no installation or device storage, and does not require users to create an account or log in. Additionally, it securely preserves user data throughout the entire process until all travel tasks are completed, even across multiple sessions.",
-      images: ["/project0301.png", "/project0302.png"],
+      images: [img0301, img0302],
       tech: [
         "React",
         "HTML",

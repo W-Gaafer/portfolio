@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import styles from "./Hero.module.css";
+import img01 from "../assets/hero01.JPG";
 
 function Hero() {
   const imgRef = useRef(null);
@@ -20,7 +21,7 @@ function Hero() {
       {/* صورة شخصية */}
       <div className={styles.imageContainer}>
         <img
-          src="/hero01.jpg"
+          src={img01}
           alt="Waleed"
           className={styles.profileImg}
           ref={imgRef}
