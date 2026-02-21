@@ -1,0 +1,78 @@
+/* Float Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Fade in from left */
+.fadeLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeLeftAnim 1s forwards;
+}
+
+@keyframes fadeLeftAnim {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in from right */
+.fadeRight {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeRightAnim 1s forwards;
+}
+
+@keyframes fadeRightAnim {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gradient Text Animation */
+.gradientText {
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientMove 3s ease infinite alternate;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Progress Bar Fill */
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background: #1e90ff;
+  border-radius: 10px;
+  animation: fill 2s forwards;
+}
+
+@keyframes fill {
+  to {
+    width: var(--fill);
+  } /* var(--fill) من JSX لكل skill */
+}
+
+/* Floating Circles */
+.floatingCircle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 6s ease-in-out infinite;
+}

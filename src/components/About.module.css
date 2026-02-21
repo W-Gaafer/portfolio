@@ -1,0 +1,42 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-align: center;
+  background-color: #0c213f;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+.about p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cfd8dc;
+  text-align: left;
+}
+
+/* Floating Circles */
+.floatingCircle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}

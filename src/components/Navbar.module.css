@@ -1,0 +1,56 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 60px;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* الصورة مخفية افتراضيًا */
+.profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.8s ease;
+}
+
+/* تظهر عند أول scroll */
+.profileImg.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navLinks li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.navLinks a {
+  color: white;
+  transition: 0.3s;
+}
+
+.navLinks a:hover {
+  color: #1e90ff;
+}

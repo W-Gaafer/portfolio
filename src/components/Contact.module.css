@@ -1,0 +1,29 @@
+.contact {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #0a192f;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+.contact p {
+  margin-bottom: 30px;
+  color: #cfd8dc;
+}
+
+.socials a {
+  margin: 0 15px;
+  font-size: 28px;
+  color: #61dafb;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #00bfff;
+}
