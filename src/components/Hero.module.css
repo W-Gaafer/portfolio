@@ -1,70 +1,67 @@
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 50px;
+  padding: 100px 20px 60px;
   background: linear-gradient(135deg, #0a192f, #1e3a8a);
   position: relative;
   color: white;
-  gap: 50px;
-  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+  overflow: hidden;
 }
 
+/* Image */
 .imageContainer {
-  flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .profileImg {
-  width: 280px;
-  height: 380px;
+  width: 220px;
+  height: 260px;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 20px 40px rgba(0, 191, 255, 0.3);
-  /*opacity: 0;*/
-  /*transform: translateX(-50px);*/
-  /*transition: all 1s ease;*/
 }
 
+/* Text */
 .textContainer {
-  flex: 1;
-  max-width: 600px;
-  /*opacity: 0;*/
-  transform: translateX(50px);
-  transition: all 1s ease;
+  max-width: 500px;
 }
 
 .textContainer h1 {
-  font-size: 48px;
-  /*margin-bottom: 10px;*/
+  font-size: 32px;
+  margin-bottom: 10px;
   background: linear-gradient(90deg, #00bfff, #1e90ff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .textContainer h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 15px;
   color: #61dafb;
 }
 
 .textContainer p {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 25px;
   line-height: 1.6;
   color: #cfd8dc;
 }
 
+/* Button */
 .button {
-  padding: 12px 30px;
-  border: none;
+  display: inline-block;
+  padding: 12px 28px;
   border-radius: 8px;
   background: #1e90ff;
   color: white;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   transition: 0.3s;
 }
 
@@ -74,11 +71,46 @@
 }
 
 /* Floating Circles */
-.floatingCircle {
+.circleOne,
+.circleTwo,
+.circleThree,
+.circleFour {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.08;
   animation: float 10s ease-in-out infinite;
+}
+
+.circleOne {
+  width: 80px;
+  height: 80px;
+  background: #94daf1;
+  top: 10%;
+  left: 10%;
+}
+
+.circleTwo {
+  width: 120px;
+  height: 120px;
+  background: #94daf1;
+  top: 15%;
+  right: 5%;
+}
+
+.circleThree {
+  width: 100px;
+  height: 100px;
+  background: #94daf1;
+  bottom: 15%;
+  right: 15%;
+}
+
+.circleFour {
+  width: 60px;
+  height: 60px;
+  background: #94daf1;
+  bottom: 10%;
+  left: 15%;
 }
 
 @keyframes float {
@@ -87,19 +119,59 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
   }
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ========================= */
+/* Tablet (481px - 769px) */
+@media (min-width: 481px) {
+  .profileImg {
+    width: 260px;
+    height: 320px;
+  }
+
+  .textContainer h1 {
+    font-size: 38px;
+  }
+
+  .textContainer h3 {
+    font-size: 20px;
+  }
+
+  .textContainer p {
+    font-size: 17px;
+  }
+}
+
+/* ========================= */
+/* Desktop */
+@media (min-width: 1024px) {
   .hero {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    text-align: left;
+    padding: 50px 120px;
+  }
+
+  .imageContainer,
+  .textContainer {
+    flex: 1;
   }
 
   .profileImg {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 380px;
+  }
+
+  .textContainer h1 {
+    font-size: 48px;
+  }
+
+  .textContainer h3 {
+    font-size: 24px;
+  }
+
+  .textContainer p {
+    font-size: 18px;
   }
 }

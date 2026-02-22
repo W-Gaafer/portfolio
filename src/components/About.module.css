@@ -1,34 +1,67 @@
 .about {
+  position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  justify-content: center;
+  padding: 100px 20px 60px;
+  background: linear-gradient(135deg, #0c213f, #102a54);
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
   text-align: center;
-  background-color: #0c213f;
+  z-index: 2;
 }
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #00bfff;
+.container h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.about p {
-  max-width: 700px;
-  font-size: 18px;
+.container p {
+  font-size: 16px;
   line-height: 1.8;
   color: #cfd8dc;
-  text-align: left;
 }
 
 /* Floating Circles */
-.floatingCircle {
+.circleOne,
+.circleTwo,
+.circleThree {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.07;
   animation: float 10s ease-in-out infinite;
+}
+
+.circleOne {
+  width: 90px;
+  height: 90px;
+  background: #94daf1;
+  top: 10%;
+  left: 60%;
+}
+
+.circleTwo {
+  width: 70px;
+  height: 70px;
+  background: #94daf1;
+  bottom: 15%;
+  left: 15%;
+}
+
+.circleThree {
+  width: 160px;
+  height: 160px;
+  background: #94daf1;
+  top: 40%;
+  right: 5%;
 }
 
 @keyframes float {
@@ -37,6 +70,35 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
+  }
+}
+
+/* ========================= */
+/* Tablet (481px - 769px) */
+@media (min-width: 481px) {
+  .container h2 {
+    font-size: 34px;
+  }
+
+  .container p {
+    font-size: 17px;
+  }
+}
+
+/* ========================= */
+/* Desktop */
+@media (min-width: 1024px) {
+  .container h2 {
+    font-size: 42px;
+  }
+
+  .container p {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .about {
+    padding: 80px 120px;
   }
 }

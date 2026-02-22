@@ -85,9 +85,9 @@ function Skills() {
           </div>
         ))}
       </div>
-      {/* Floating Circles */}
+
       <div
-        className={`${styles.floatingCircle}`}
+        className={styles.floatingCircle}
         style={{
           width: 100,
           height: 100,
@@ -96,8 +96,9 @@ function Skills() {
           left: "65%",
         }}
       ></div>
+
       <div
-        className={`${styles.floatingCircle}`}
+        className={styles.floatingCircle}
         style={{
           width: 80,
           height: 80,

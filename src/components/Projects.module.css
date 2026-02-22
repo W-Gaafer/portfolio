@@ -1,7 +1,9 @@
 .projects {
+  position: relative;
   padding: 100px 10%;
   background: #0f172a;
   color: white;
+  overflow: hidden;
 }
 
 .sectionTitle {
@@ -20,6 +22,7 @@
 /* Card */
 .card {
   display: flex;
+  flex-direction: column; /* الصور فوق النصوص */
   gap: 40px;
   background: #1e293b;
   padding: 30px;
@@ -36,26 +39,27 @@
 /* Images */
 .imageWrapper {
   position: relative;
-  width: 400px;
-}
-
-.mainImage {
   width: 100%;
-  border-radius: 15px;
-}
-
-.stackedImages {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.smallImage {
-  position: absolute;
-  width: 120px;
+  height: auto;
+  aspect-ratio: 16 / 7.3; /* يحافظ على نسبة الطول للعرض */
+  overflow: hidden;
   border-radius: 10px;
-  opacity: 0.8;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sliderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* يملأ الحاوية ويحافظ على النسبة */
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
 }
 
 /* Content */
@@ -73,6 +77,8 @@
   margin-bottom: 20px;
   line-height: 1.6;
   color: #cbd5e1;
+  font-size: 1rem;
+  word-wrap: break-word;
 }
 
 /* Tech Stack */
@@ -94,6 +100,7 @@
 .buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .githubBtn,
@@ -123,27 +130,6 @@
   background: #2563eb;
 }
 
-.imageWrapper {
-  position: relative;
-  width: 550px;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.sliderImage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.active {
-  opacity: 1;
-}
-
 /* Floating Circles */
 .floatingCircle {
   position: absolute;
@@ -159,5 +145,85 @@
   }
   50% {
     transform: translateY(-25px);
+  }
+}
+
+/* ========================= */
+/* 📲 Tablet (481px - 769px) */
+/* ========================= */
+
+@media (max-width: 769px) and (min-width: 481px) {
+  .cards {
+    gap: 40px;
+  }
+
+  .card {
+    flex-direction: column; /* الصور فوق النصوص */
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 7.3; /* يحافظ على نسبة الطول للعرض */
+  }
+
+  .content h3 {
+    font-size: 1.4rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .techBadge {
+    font-size: 0.8rem;
+  }
+
+  .githubBtn,
+  .liveBtn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (<=480px) */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .cards {
+    gap: 30px;
+  }
+
+  .card {
+    flex-direction: column; /* الصور فوق النصوص */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 7.3; /* يحافظ على نسبة الطول للعرض */
+  }
+
+  .content h3 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .techBadge {
+    font-size: 0.75rem;
+  }
+
+  .githubBtn,
+  .liveBtn {
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 }

@@ -1,12 +1,14 @@
 .skills {
+  position: relative;
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 100px 60px;
   background: #0a192f;
   text-align: center;
+  overflow: hidden;
 }
 
 .skills h2 {
-  font-size: 40px;
+  font-size: 42px;
   margin-bottom: 60px;
   background: linear-gradient(90deg, #00bfff, #1e90ff);
   -webkit-background-clip: text;
@@ -81,8 +83,9 @@
 .floatingCircle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.08;
   animation: float 10s ease-in-out infinite;
+  pointer-events: none;
 }
 
 @keyframes float {
@@ -92,5 +95,73 @@
   }
   50% {
     transform: translateY(-25px);
+  }
+}
+
+/* ========================= */
+/* 📲 Tablet (481px - 769px) */
+/* ========================= */
+
+@media (max-width: 769px) and (min-width: 481px) {
+  .skills {
+    padding: 80px 30px;
+  }
+
+  .skills h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (<=480px) */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .skills {
+    padding: 70px 20px;
+  }
+
+  .skills h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .skillItem {
+    margin-bottom: 12px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .stars svg {
+    font-size: 14px;
   }
 }
