@@ -10,6 +10,9 @@ import img0201 from "../assets/project0201.PNG";
 import img0202 from "../assets/project0202.PNG";
 import img0301 from "../assets/project0301.PNG";
 import img0302 from "../assets/project0302.PNG";
+import img0401 from "../assets/project0401.PNG";
+import img0402 from "../assets/project0402.PNG";
+import img0403 from "../assets/project0403.PNG";
 
 function Projects() {
   const ref = useRef(null);
@@ -36,15 +39,6 @@ function Projects() {
       live: "https://solmare.netlify.app/",
     },
     {
-      title: "Fare Share Feature",
-      description:
-        "This feature simplifies shared expenses during road trips by allowing any partner to cover payments, while the feature automatically settles and summarizes debts at the end of the journey.",
-      images: [img0201, img0202],
-      tech: ["React", "HTML", "CSS modules", "JavaScript", "ES6+"],
-      github: "https://github.com/W-Gaafer/fare-share",
-      live: "https://w-gaafer.github.io/fare-share/",
-    },
-    {
       title: "Handbag App",
       description:
         "The application helps users prepare everything they need for their trip, ensuring that no tasks are forgotten. It is fully online, requires no installation or device storage, and does not require users to create an account or log in. Additionally, it securely preserves user data throughout the entire process until all travel tasks are completed, even across multiple sessions.",
@@ -59,6 +53,32 @@ function Projects() {
       ],
       github: "https://github.com/W-Gaafer/HandBag",
       live: "https://handibag.netlify.app/",
+    },
+    {
+      title: "Fare Share Feature",
+      description:
+        "This feature simplifies shared expenses during road trips by allowing any partner to cover payments, while the feature automatically settles and summarizes debts at the end of the journey.",
+      images: [img0201, img0202],
+      tech: ["React", "HTML", "CSS modules", "JavaScript", "ES6+"],
+      github: "https://github.com/W-Gaafer/fare-share",
+      live: "https://w-gaafer.github.io/fare-share/",
+    },
+    {
+      title: "Popcorn App",
+      description:
+        "Movie search web app built with React that allows users to discover films, view detailed information, rate movies, and manage a personal watchlist. Data is fetched from the TMDB API and saved using LocalStorage.",
+      images: [img0401, img0402, img0403],
+      tech: [
+        "React",
+        "HTML",
+        "CSS modules",
+        "JavaScript",
+        "ES6+",
+        "LocalStorage",
+        "Responsive Web Design",
+      ],
+      github: "https://github.com/W-Gaafer/popcorn",
+      live: "https://w-gaafer.github.io/popcorn/",
     },
   ];
 
